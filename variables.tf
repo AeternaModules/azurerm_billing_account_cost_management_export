@@ -24,8 +24,8 @@ EOT
     recurrence_period_end_date   = string
     recurrence_period_start_date = string
     recurrence_type              = string
-    active                       = optional(bool, true)
-    file_format                  = optional(string, "Csv")
+    active                       = optional(bool)   # Default: true
+    file_format                  = optional(string) # Default: "Csv"
     export_data_options = object({
       time_frame = string
       type       = string
