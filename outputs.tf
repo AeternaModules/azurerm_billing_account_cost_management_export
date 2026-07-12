@@ -1,3 +1,7 @@
+output "billing_account_cost_management_exports_id" {
+  description = "Map of id values across all billing_account_cost_management_exports, keyed the same as var.billing_account_cost_management_exports"
+  value       = { for k, v in azurerm_billing_account_cost_management_export.billing_account_cost_management_exports : k => v.id }
+}
 output "billing_account_cost_management_exports_active" {
   description = "Map of active values across all billing_account_cost_management_exports, keyed the same as var.billing_account_cost_management_exports"
   value       = { for k, v in azurerm_billing_account_cost_management_export.billing_account_cost_management_exports : k => v.active }
